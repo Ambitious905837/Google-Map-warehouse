@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Place Searches</title>
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <input type="text" id="address" placeholder="Enter address or place name">
+      <button onclick="handleSearch()">Search</button>
+    </header>
+    <div id="map"></div>
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&libraries=places&v=weekly"
+      defer
+    ></script>
+  </body>
+  <style>
+    #map {
+      height: 90%;
+    }
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      height: 10%;
+      display: flex;
+      align-items: center;
+      padding: 0 10px;
+      background-color: #f8f9fa;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    input#address {
+      flex: 1;
+      padding: 8px;
+      font-size: 16px;
+    }
+    button {
+      padding: 8px 16px;
+      font-size: 16px;
+      margin-left: 10px;
+    }
+  </style>
+</html>
